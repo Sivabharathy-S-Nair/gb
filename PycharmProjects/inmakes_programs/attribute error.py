@@ -1,0 +1,2 @@
+sample="hai"
+sample.reverse

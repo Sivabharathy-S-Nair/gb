@@ -1,0 +1,21 @@
+from tkinter import *
+root=Tk()
+def fun():
+    print("clicked")
+mymenu=Menu(root)
+root.config(menu=mymenu)
+submenu=Menu(mymenu)
+mymenu.add_cascade(label="file",menu=submenu)
+submenu.add_command(label="save")
+submenu.add_command(label="save1")
+submenu.add_command(label="save2")
+submenu.add_separator()
+submenu.add_command(label="save3")
+submenu.add_command(label="save4")
+
+newmenu=Menu(mymenu)
+mymenu.add_cascade(label="Edit",menu=newmenu)
+newmenu.add_command(label="undo",command= fun)
+#toolbar=Frame(root,bg="pink")
+#toolbar.pack(side=TOP,fill=X)
+root.mainloop()
